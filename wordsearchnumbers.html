@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="English vocabulary, A1, A2, expressions, false friends, prepositions">
+  <meta name="description" content="learn and practise English vocabulary">
+  <meta name="author" content="Jane Kelsall">
+  <meta http-equiv="refresh" content="360">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Wordsearch Numbers</title>
+  <link rel="icon" type="IMAGES/x-icon" href="IMAGES/favicon.ico">
+
+  <script>
+    window.onload = function () {
+    for (let node of document.querySelectorAll ("td")) {
+
+    node.onclick = function () {
+     if (node.className == "") {
+        node.className = "selected"
+     } else {
+        node.className = ""
+     }
+   }
+
+     if (node.textContent != "") continue;
+    let charCode = Math.round (65 + Math.random() * 25)
+    node.textContent = String.fromCharCode (charCode)
+     }
+   }
+  </script>
+
+  <style>
+    table{
+     border-collapse:collapse;
+    }
+
+    td {
+     cursor: pointer;
+     border: 1px solid blue;
+     width:40px;
+     height: 40px;
+     text-align: center;
+   }
+
+  td.selected {
+     background: lime;
+   }
+
+  div {
+    float: left;
+    width: 50%;
+   }
+  </style>
+</head>
+
+<body>
+<header>
+  <h2>A1 Vocabulary</h2>
+</header>
+
+<section>
+  <nav>
+  <h4>LEVELS</h4>
+    <ul>
+      <li><a href="A1.html">A1</a></li>
+      <li><a href="#">A2</a></li>
+      <li><a href="#">B1</a></li>
+      <li><a href="#">B2</a></li>
+      <li><a href="#">C1</a></li>
+      <li><a href="#">C2</a></li><br>
+	<h4>Specific areas</h4>
+	  <li><a href="#">Phrasal Verbs</a></li>
+	  <li><a href="#">Prepositions</a></li>
+	  <li><a href="#">Compound Words</a></li>
+	  <li><a href="#">False Friends</a></li>
+	  <li><a href="#">Sayings</a></li>
+	  <li><a href="#">Curious expressions</a></li>
+<br>
+<br>
+<br>
+<br>
+      <li><a href="https://www.wordreference.com" target="WR">Check out WordReference</a></li>
+    </ul>
+  </nav>
+  <article>
+<h2>Numbers</h2>
+<p>Find the numbers in the wordsearch:</p>
+<div>
+  <table>
+    <tr>
+      <td>O</td>
+      <td>N</td>
+      <td>F</td>
+      <td>E</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>N</td>
+      <td>V</td>
+      <td>B</td>
+      <td>H</td>
+      <td>K</td>
+      <td>W</td>
+      <td>J</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>I</td>
+      <td>J</td>
+      <td>M</td>
+      <td>R</td>
+      <td>P</td>
+      <td>O</td>
+      <td>U</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>S</td>
+      <td>E</td>
+      <td>V</td>
+      <td>E</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>E</td>
+      <td>S</td>
+      <td>S</td>
+      <td>E</td>
+      <td>X</td>
+      <td>K</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>O</td>
+      <td>U</td>
+      <td>R</td>
+      <td>S</td>
+      <td>I</td>
+      <td>X</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>I</td>
+      <td>L</td>
+      <td>T</td>
+      <td>H</td>
+      <td>G</td>
+      <td>I</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>E</td>
+      <td>N</td>
+      <td>X</td>
+      <td>C</td>
+      <td>F</td>
+      <td>P</td>
+      <td>Z</td>
+    </tr>
+  </table>
+</div>
+<div>
+<ul>
+   <li>ZERO</li>
+   <li>ONE</li>
+   <li>TWO</li>
+   <li>THREE</li>
+   <li>FOUR</li>
+   <li>FIVE</li>
+   <li>SIX</li>
+   <li>SEVEN</li>
+   <li>EIGHT</li>
+   <li>NINE</li>
+   <li>TEN</li>
+  </ul>
+</div>
+
+<p><a href="numbers questionnaire.html" target="_self" style="background-color:#1d7ce2; color:white; font-size: 25px; padding:14px 25px; text-align:center; text-decoration:none;
+  display:inline-block";> Next</a></p>
+<br>
+
+  </article>
+</section>
+
+<br>
+<footer>
+  <a href="Website.html">Start</a>
+  <a href="My Account.html">My Account</a>
+  <a href="Contact">Contact</a>
+</footer>
+
+</body>
+</html>
