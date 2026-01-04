@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #1d7ce2;
+  padding: 2px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: auto; /* only for demonstration, should be removed */
+  background: powderblue;
+  padding: 5px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  height: auto; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #1d7ce2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Add your styles here */
+.text-enunciado {
+	font-size: 15px;
+	font-weight: bold;
+	color: #009;
+	word-spacing: .1em;
+}
+.text-red {
+	font-weight: bold;
+	font-size: 14px;
+	color: red;
+	margin-bottom: 5px;
+}
+.question {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+.score-button {
+	background-color: #9CDDF9;
+	border-radius: 7px;
+	border: 1px solid #4e6096;
+	display: inline-block;
+	margin: 30px 7px;
+	cursor: pointer;
+	color: #006;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 7px 10px;
+	letter-spacing: .1em;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #283966;
+}
+.score-button:hover {
+	background-color: #fff;
+}
+.score-button:active {
+	position: relative;
+	top: 1px;
+}
+.container {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row; /* Coloca las zonas de soltar y las palabras en una fila */
+	gap: 40px; /* Espaciado entre columnas */
+}
+.dragging {
+	visibility: visible; /* Oculta la palabra original */
+	resize: none;
+}
+.item {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: center;
+}
+.image {
+	width: 150px;
+	height: 100px;
+	border: 2px solid #0056b3; /* Borde resaltado similar al de las palabras */
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+	border-radius: 4px; /* Bordes redondeados */
+	transition: all 0.3s ease; /* Transición para suavizar el cambio */
+}
+.image:hover {
+	background-color: #f0f0f0; /* Fondo más claro al pasar el cursor */
+}
+.drop-zones {
+	display: flex;
+	flex-direction: column; /* Las zonas de soltar permanecen en una columna */
+	gap: 20px;/* Reducir para mais de 8 items para mobiles */
+}
+.drop-zone {
+	width: 100px;
+	height: 40px;
+	border: 1px solid #0056b3; /* Borde resaltado */
+	border-radius: 4px; /* Bordes redondeados */
+	display: flex;
+	font-size: 17px;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+	transition: all 0.3s ease; /* Transición para suavizar el cambio */
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+	box-sizing: border-box;
+}
+.drop-zone:hover {
+	background-color: #d1d1d1; /* Fondo más claro al pasar el cursor */
+}
+.drop-zone.correct {
+	background-color: #dfffdf !important;
+	border-color: #28a745 !important;
+}
+.placeholder {
+	display: inline-block;
+	width: 80px;
+	height: 45px;
+	border: none; /* Marcador temporal */
+	background-color: transparent;
+}
+.words {
+	margin-left: 20px;
+	margin-top: 0px;
+	display: flex;
+	flex-direction: column; /* Las palabras se organizan en una columna */
+	gap: 20px; /* Espaciado entre palabras */
+	align-items: center; /* Alinea las palabras al centro horizontalmente */
+}
+.word {
+	display: flex; /* Cambiado de inline-block a flex para facilitar el centrado */
+	align-items: center; /* Centra el contenido verticalmente */
+	justify-content: center; /* Centra el contenido horizontalmente */
+	width: 100px; /* Ancho fijo */
+	height: 40px; /* Altura fija */
+	background-color: #E8E8E8;
+	color: #000;
+	border-radius: 5px;
+	cursor: grab; /* Cambia el cursor a una mano al pasar sobre la palabra */
+	font-size: 17px;
+	text-align: center; /* Asegura el texto centrado */
+	line-height: normal; /* Evita problemas con el centrado vertical */
+	box-sizing: border-box; /* Asegura que el padding no afecte las dimensiones */
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+	border: 2px solid #0056b3; /* Borde resaltado */
+	transition: none; /* Desactiva la transición */
+}
+.word:hover {
+	background-color: #d1d1d1; /* Color de fondo más claro al pasar el cursor */
+}
+.word:active {
+	cursor: grabbing;/* Puedes agregar efectos adicionales cuando la palabra se está arrastrando si lo deseas */
+	transition: none; /* Transición para suavizar el cambio */
+}
+#exercise-container {
+	float: left;
+	text-align: left;
+	padding: 5px 0px 4px 10px;
+	width: 90%;
+}
+.check-container {
+	margin-top: 30px;
+	text-align: left;
+}
+.check-button {
+	background-color: #9CDDF9;
+	border-radius: 7px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	border: 1px solid #4e6096;
+	padding: 10px 20px;
+	font-size: 17px;
+	color: #006;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+.check-button:hover {
+	background-color: #fff;
+	transform: scale(1.05); /* Efecto de zoom */
+}
+.check-button:active {
+	transform: scale(0.95); /* Efecto de presión */
+}
+#checkButton.disabled {
+	background-color: #8DE4B2;
+	cursor: default;
+}
+.next-button {
+	background-color: #9CDDF9;
+	border-radius: 7px;
+	border: 1px solid #4e6096;
+	padding: 10px 20px;
+	font-size: 17px;
+	color: #006;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+.next-button:hover {
+	background-color: #fff;
+	transform: scale(1.05); /* Efecto de zoom */
+}
+.next-button:active {
+	transform: scale(0.95); /* Efecto de presión */
+}
+.blinking {
+	animation: blink 1s ease-in-out 3; /* Hace parpadear el botón 3 veces */
+}
+
+/* Medios Responsivos */
+@media (max-width: 768px) {
+.item {
+	width: 100%; /* Cada ítem ocupa toda la fila en pantallas pequeñas */
+	max-width: 100%; /* No exceder el ancho del contenedor */
+}
+.image {
+	max-width: 80px; /* Reduce el tamaño de las imágenes */
+}
+.drop-zone {
+	max-width: 80px; /* Ajusta el tamaño de las zonas de soltar */
+	height: 40px;
+}
+.word {
+	padding: 5px 10px;
+	max-width: 80px; /* Ajusta el tamaño máximo */
+}
+}
+
+@media (max-width: 480px) {
+#exercise-container {
+	max-width: 90%;
+}
+.words {
+	margin-left: 5px;
+	display: flex;
+	flex-direction: column;
+}
+}
