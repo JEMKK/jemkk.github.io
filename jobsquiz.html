@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="English vocabulary, A1, A2, collocations, false friends, prepositions">
+  <meta name="description" content="learn and practise English vocabulary">
+  <meta name="author" content="Jane Kelsall">
+  <meta http-equiv="refresh" content="3600">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Jobs Quiz</title>
+  <link rel="icon" type="image/x-icon" href="IMAGES/favicon.ico">
+<style>
+.button001 {
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+			}
+</style>
+</head>
+
+<body>
+<header>
+  <h2>A1 Vocabulary</h2>
+</header>
+
+<section>
+  <nav>
+  <h4>LEVELS</h4>
+    <ul>
+      <li><a href="a1.html">A1</a></li>
+      <li><a href="#">A2</a></li>
+      <li><a href="#">B1</a></li>
+      <li><a href="#">B2</a></li>
+      <li><a href="#">C1</a></li>
+      <li><a href="#">C2</a></li><br>
+	<h4>Specific areas</h4>
+	  <li><a href="#">Phrasal Verbs</a></li>
+	  <li><a href="#">Prepositions</a></li>
+	  <li><a href="#">Compound Words</a></li>
+	  <li><a href="#">False Friends</a></li>
+	  <li><a href="#">Sayings</a></li>
+	  <li><a href="#">Curious expressions</a></li>
+<br>
+<br>
+<br>
+<br>
+      <li><a href="https://www.wordreference.com" target="WR">Check out WordReference</a></li>
+    </ul>
+  </nav>
+
+  <article>
+<h1>Jobs Quiz</h1>
+<h4>Fill in the gaps.</h4>
+<ol>
+<li>They diagnose health problems: <input id="input001" size="15" /><text class="button002" id="check001"></text></li>
+<li>They help children to learn: <input id="input002" size="15" /><text class="button002" id="check002"></text></li>
+<li>She catches criminals: <input id="input003" size="15" /><text class="button002" id="check003"></text></li>
+<li>He makes things: <input id="input004" size="15" /><text class="button002" id="check004"></text></li>
+<li>He doesn't work. He's 70: <input id="input005" size="15" /><text class="button002" id="check005"></text></li>
+<li>She wants a job: <input id="input006" size="15" /><text class="button002" id="check006"></text></li>
+<li>They welcome people in hotels: <input id="input007" size="15" /><text class="button002" id="check007"></text></li>
+<li>They help customers to buy things: <input id="input008" size="15" /><text class="button002" id="check008"></text></li>
+<li>They take people in their car: <input id="input009" size="15" /><text class="button002" id="check009"></text></li>
+<li>She gives people food in a restaurant: <input id="input0010" size="15" /><text class="button002" id="check0010"></text></li>
+<ol>
+<div id="disappear001"><div id="center001"><button class="button001" onclick="submit001()">Submit</button></div></div><br />
+        <div id="center001"><p id="message001"></p><p id="reload001"></p></div>
+
+<a href="jobsreading.html" target="_self" style="background-color:#1d7ce2; color:white; font-size: 25px; padding:14px 25px; text-align:center; text-decoration:none;
+  display:inline-block";> Next</a>
+</article>
+</section>
+<footer>
+  <a href="website.html">Start</a>
+  <a href="My Account.html">My Account</a>
+  <a href="Contact">Contact</a>
+</footer>
+<script>
+        var bb;
+        var cc;
+        var dd;
+        var ee;
+        var ff;
+		var gg;
+		var hh;
+		var ii;
+		var jj;
+		var kk;
+        function submit001() {
+            b = input001.value;
+            c = input002.value;
+            d = input003.value;
+            e = input004.value;
+            f = input005.value;
+			g = input006.value;
+			h = input007.value;
+			i = input008.value;
+			j = input009.value;
+			k = input0010.value;
+
+            if (b == "doctors" || b == "doctors") {
+                bb = 1;
+                input001.value = b;
+                check001.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input001.value = b;
+                check001.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+            if (c == "teachers" || c == "teachers") {
+                cc = 1
+                input002.value = c;
+                check002.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input002.value = c;
+                check002.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+            if (d == "policewoman" || d == "policewoman") {
+                dd = 1;
+                input003.value = d;
+                check003.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input003.value = d;
+                check003.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+            if (e == "factory worker" || e == "factory worker") {
+                ee = 1;
+                input004.value = e;
+                check004.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input004.value = e;
+                check004.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+            if (f == "retired" || f == "retired") {
+                ff = 1;
+                input005.value = f;
+                check005.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input005.value = f;
+                check005.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+			if (g == "unemployed" || g == "unemployed") {
+                gg = 1;
+                input006.value = g;
+                check006.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input006.value = g;
+                check006.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+			if (h == "receptionists" || h == "receptionists") {
+                hh = 1;
+                input007.value = h;
+                check007.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input007.value = h;
+                check007.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+			if (i == "shop assistants" || i == "shop assistants") {
+                ii = 1;
+                input008.value = i;
+                check008.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input008.value = i;
+                check008.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+			if (j == "taxi drivers" || j == "taxi drivers") {
+                jj = 1;
+                input009.value = j;
+                check009.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input009.value = j;
+                check009.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+			if (k == "waitress" || k == "waitress") {
+                kk = 1;
+                input0010.value = k;
+                check0010.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input0010.value = k;
+                check0010.innerHTML = "<text class=button002>" + "✖" + "</text>";
+			}	
+            if (bb == 1 && cc == 1 && dd == 1 && ee == 1 && ff == 1 && gg == 1 && hh == 1 && ii == 1 && jj== 1 && kk== 1) {
+                message001.innerHTML = "So professional!";
+                disappear001.innerHTML = "";
+                reload001.innerHTML = "<div id=center001><button class=button001 onclick=repeat001()>Repeat</button></div>";
+            }
+        }
+
+            function repeat001() {
+                location.reload();
+            }
+    </script>
+</body>
+</html>

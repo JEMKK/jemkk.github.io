@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="English vocabulary, A1, A2, expressions, false friends, prepositions">
+  <meta name="description" content="learn and practise English vocabulary">
+  <meta name="author" content="Jane Kelsall">
+  <meta http-equiv="refresh" content="3600">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Countries Gap-fill</title>
+	<link rel="icon" type="IMAGES/x-icon" href="IMAGES/favicon.ico">
+
+  <style>
+input {
+     width: 50px;
+    }
+
+#frame001 {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: auto;
+            height: auto;
+            padding: 5px;
+        }
+
+#color001 {
+            color: black;
+            font-size: large;
+            text-align: left;
+        }
+
+#center001 {
+            text-align: center;
+        }
+
+.button001 {
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+.button002 {
+            width: 10px;
+            height: 10px;
+        }
+</style>
+</head>
+
+<body>
+<header>
+  <h2>A1 Vocabulary</h2>
+</header>
+
+<section>
+  <nav>
+  <h4>LEVELS</h4>
+    <ul>
+      <li><a href="a1.html">A1</a></li>
+      <li><a href="#">A2</a></li>
+      <li><a href="#">B1</a></li>
+      <li><a href="#">B2</a></li>
+      <li><a href="#">C1</a></li>
+      <li><a href="#">C2</a></li><br>
+	<h4>Specific areas</h4>
+	  <li><a href="#">Phrasal Verbs</a></li>
+	  <li><a href="#">Prepositions</a></li>
+	  <li><a href="#">Compound Words</a></li>
+	  <li><a href="#">False Friends</a></li>
+	  <li><a href="#">Sayings</a></li>
+	  <li><a href="#">Curious expressions</a></li>
+<br>
+<br>
+<br>
+<br>
+      <li><a href="https://www.wordreference.com" target="WR">Check out WordReference</a></li>
+    </ul>
+  </nav>
+  <article>
+
+<div id="frame001">
+        <div id="color001">
+            <div id="center001">
+                <h2><strong>Countries Gap-fill</strong></h2>
+				<h4>Complete with the correct country</h4>
+            <h5><strong>Word Bank:</strong> the USA - Moscow - China - Russia - Ukraine</h5></div>
+<p>Its capital city is <input id="input005" size="15" /><text class="button002" id="check005"></text>.
+The country is <input type="text" class="check003" id="input001" size="15" /><text class="button002" id="check001"></text>.
+It has a border with <input id="input002" size="15" /><text class="button002" id="check002"></text>.
+Traditionally it's friends with<input id="input003" size="15" /> <text class="button002" id="check003"></text>.
+Historically it isn't an ally of<input id="input004" size="15" /><text class="button002" id="check004"></text>.</p>
+            <div id="disappear001"><div id="center001"><button class="button001" onclick="submit001()">Submit</button></div></div>
+            <div id="center001"><p id="message001"></p><p id="reload001"></p></div>
+</div>
+</div>
+	<a href="a1.html" target="_self" style="background-color:#1d7ce2; color:white; font-size: 25px; padding:14px 25px; text-align:center; text-decoration:none;
+  display:inline-block";> Next</a>
+  </article>
+</section>
+
+<br>
+<footer>
+  <a href="website.html">Start</a>
+  <a href="My Account.html">My Account</a>
+  <a href="Contact">Contact</a>
+</footer>
+    <script>
+        var g;
+        var h;
+        var i;
+        var j;
+        var k;
+        function submit001() {
+            b = input001.value;
+            c = input002.value;
+            d = input003.value;
+            e = input004.value;
+            f = input005.value;
+            if (b == "Russia" || b == "Russia") {
+                g = 1;
+                input001.value = b;
+                check001.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input001.value = b;
+                check001.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+
+            if (c == "Ukraine" || c == "Ukraine") {
+                h = 1
+                input002.value = c;
+                check002.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input002.value = c;
+                check002.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+
+            if (d == "China" || d == "China") {
+                i = 1;
+                input003.value = d;
+                check003.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input003.value = d;
+                check003.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+
+            if (e == "the USA" || e == "The USA") {
+                j = 1;
+                input004.value = e;
+                check004.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input004.value = e;
+                check004.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+
+            if (f == "Moscow" || f == "Moscow") {
+                k = 1;
+                input005.value = f;
+                check005.innerHTML = "<text class=button002>" + "✔" + "</text>";
+            } else {
+                input005.value = f;
+                check005.innerHTML = "<text class=button002>" + "✖" + "</text>";
+            }
+
+            if (g == 1 && h == 1 && i == 1 && j == 1 && k == 1) {
+                message001.innerHTML = "Congratulations! You have successfully finished this quiz.";
+                disappear001.innerHTML = "";
+                reload001.innerHTML = "<div id=center001><button class=button001 onclick=repeat001()>Repeat</button></div>";
+            }
+        }
+
+            function repeat001() {
+                location.reload();
+            }
+    </script>
+
+</body>
+</html>

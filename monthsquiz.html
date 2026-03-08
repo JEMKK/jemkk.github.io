@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="English vocabulary, A1, A2, expressions, false friends, prepositions, compound words">
+  <meta name="description" content="learn and practise English vocabulary">
+  <meta name="author" content="Jane Kelsall">
+  <meta http-equiv="refresh" content="3600">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<title>Months Quiz</title>
+<link rel="icon" type="images/x-icon" href="images/favicon.ico">
+
+	<header>
+		<h2>A1 Vocabulary</h2>
+	</header>
+
+<style>
+	#frame1 {
+		padding: 4px;
+		background-color: lightblue;
+		width: auto;
+		height: auto;
+		color: black;
+		border: 2px solid black;
+		text-align: center;
+	}
+
+	.green001 {
+		background-color: green;
+		width: 80px;
+		height: 40px;
+		color: white;
+		border: green;
+		text-align: center;
+	}
+
+	.green002 {
+		background-color: darkgreen;
+		width: 80px;
+		height: 40px;
+		color: white;
+		border: green;
+		text-align: center;
+	}
+</style>
+
+<script>
+var questions = ["When does the new year start?<br /><br /><button class=green001 id=hide1 onclick=correct1()>January</button><br /><br /><button class=green001 id=hide2 onclick=incorrect1()>December</button><br /><br />",
+
+         "In which month is Valentine's Day?<br /><br /><button class=green001 id=hide2 onclick=incorrect1()>October</button><br /><br /><button class=green001 id=hide1 onclick=correct1()>February</button><br /><br />",
+          
+         "When is St. Patrick's Day?<br /><br /><button class=green001 id=hide2 onclick=incorrect1()>April</button><br /><br /><button class=green001 id=hide1 onclick=correct1()>March</button><br /><br />",
+          
+         "When is April Fool's Day?<br /><br /><button class=green001 id=hide1 onclick=correct1()>April</button><br /><br /><button class=green001 id=hide2 onclick=incorrect1()>June</button><br /><br />",
+
+         "When is Labour Day celebrated in the USA?<br /><br /><button class=green001 id=hide2 onclick=incorrect1()>September</button><br /><br /><button class=green001 id=hide1 onclick=correct1()>May</button>",
+          
+         "Which months are named after 2 Roman emperors?<br /><br /><button class=green001 id=hide1 onclick=correct1()>July and August</button><br /><br /><button class=green001 id=hide2 onclick=incorrect1()>August and June</button><br /><br />",
+
+         "When is Guy Fawke's night celebrated in the UK?<br /><br /><button class=green001 id=hide2 onclick=incorrect1()>September</button><br /><br /><button class=green001 id=hide1 onclick=correct1()>November</button><br /><br />",
+          
+         "When is Christmas Day?<br /><br /><button class=green001 id=hide2 onclick=incorrect1()>24th December</button><br /><br /><button class=green001 id=hide1 onclick=correct1()>December</button><br /><br />",
+          
+         "In which month does Munich's Oktoberfest begin?<br /><br /><button class=green001 id=hide1 onclick=correct1()>September</button><br /><br /><button class=green001 id=hide2 onclick=incorrect1()>October</button><br /><br />",
+
+          "0"];
+          
+          var answers = ["The answer is January.", "The answer is February.", "The answer is March.", "The answer is April.", "The answer is May.", "The answer is July and August.", "The answer is November.", "The answer is December.", "The answer is September.", "0"];
+          
+          var numbers = 0;
+          numbers++;
+          
+          var scores = 0;
+          scores++;
+          
+
+function begin1() {
+disappear1.innerHTML = "";
+country001.innerHTML = numbers++;
+message001.innerHTML = questions.shift();
+}
+ 
+function btn1() {
+country001.innerHTML = numbers++;
+message001.innerHTML = questions.shift();
+message002.innerHTML = "";
+message003.innerHTML = "";
+if (questions == questions.length) {
+message001.innerHTML = "End of Quiz";
+country001.innerHTML = numbers - 2;
+  }
+  }
+ 
+function correct1() {
+score001.innerHTML = scores++;
+message002.innerHTML = "Correct. " + answers.shift();
+hide1.style.background = "blue";
+hide1.disabled = true;
+hide2.disabled = true;
+message003.innerHTML = "<button class=green002 onclick=btn1()>Next</button>";
+}
+
+function incorrect1() {
+
+message002.innerHTML = "Incorrect. " + answers.shift();
+hide2.style.background = "red";
+hide1.style.background = "blue";
+hide1.disabled = true;
+hide2.disabled = true;
+message003.innerHTML = "<button class=green002 onclick=btn1()>Next</button>";
+}
+</script>
+</head>
+
+<body>
+<section>
+  <nav>
+  <h4>LEVELS</h4>
+    <ul>
+      <li><a href="a1.html">A1</a></li>
+      <li><a href="#">A2</a></li>
+      <li><a href="#">B1</a></li>
+      <li><a href="#">B2</a></li>
+      <li><a href="#">C1</a></li>
+      <li><a href="#">C2</a></li><br>
+	<h4>Specific areas</h4>
+	  <li><a href="#">Phrasal Verbs</a></li>
+	  <li><a href="#">Prepositions</a></li>
+	  <li><a href="#">Compound Words</a></li>
+	  <li><a href="#">False Friends</a></li>
+	  <li><a href="#">Sayings</a></li>
+	  <li><a href="#">Curious expressions</a></li>
+<br>
+<br>
+<br>
+<br>
+      <li><a href="https://www.wordreference.com" target="WR">Check out WordReference</a></li>
+    </ul>
+  </nav>
+
+	<article>
+		<h2>Months Quiz</h2>
+
+<div id="frame1">
+                <h2>Questions</h2>
+                Question: <text id="country001">0</text> / 9<br />
+                Score: <text id="score001">0</text> / 9<br />
+            <hr />
+
+<div id="disappear1">
+<p>Click BEGIN to start the quiz.</p>
+<button class="green002" onclick="begin1()">BEGIN</button>
+</div>
+<p id="message001"></p>
+<p id="message002"></p>
+<p id="message003"></p>
+</div>
+<a href="timeprepositions.html" target="_self" style="background-color:#1d7ce2; color:white; font-size: 25px; padding:14px 25px; text-align:center; text-decoration:none;
+  display:inline-block";> Next</a>
+    </article>
+    </section>
+	
+	<footer>
+    <a href="website.html">Start</a>
+    <a href="My Account.html">My Account</a>
+    <a href="Contact">Contact</a>
+	</footer>
+
+</body>
+</html>
